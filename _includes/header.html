@@ -1,24 +1,13 @@
-<header class="site-header">
+<header class="header">
+  <label for="mobile-menu" class="show-mobile-menu">Menu</label>
+  <nav>
+    <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
 
-  <div class="wrapper">
-
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-        </svg>
-      </a>
-
-      <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </nav>
-
-  </div>
-
+    <ul class="header-nav nav-links">
+      {% include navbar.html %}
+    </ul>
+  </nav>
+  <a href="/" class="header-logo">
+    <img src="/images/logo.png" />
+  </a>
 </header>
